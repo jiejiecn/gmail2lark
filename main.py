@@ -8,10 +8,6 @@ import msg_cleared
 now = datetime.now()
 log_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-
-alert_in_dt_format = "%a, %b %d, %H:%M %Z %Y"                         #Tue, Sep 5, 08:45 GMT 2023
-alert_out_dt_format = "YYYY/MM/DD HH:mm"        #2023/09/04 11:43
-
 name_pattern = 'NAME\:.*'
 time_pattern = 'START TIME\:.*'
 endtime_pattern = 'STOP TIME\:.*'
@@ -48,9 +44,7 @@ while(True):
 
             result = re.search(time_pattern, content, flags=re.M)
             if result:
-                str_starttime = result.group()
-                starttime = datetime.strptime(str_starttime, alert_in_dt_format)
-                msg['card']['elements'][3]['text']['content'] = starttime.strftime(alert_out_dt_format)
+                msg['card']['elements'][3]['text']['content'] = result.group()
 
             result = re.search(cpcode_pattern, content, flags=re.M)
             if result:
@@ -62,9 +56,7 @@ while(True):
             
             result = re.search(endtime_pattern, content, flags=re.M)            #Add stop time for alert cleared
             if result:
-                str_endtime = result.group()
-                endtime = datetime.strptime(str_endtime, alert_in_dt_format)
-                msg['card']['elements'][4]['text']['content'] = endtime.strftime(alert_out_dt_format)
+                msg['card']['elements'][4]['text']['content'] = result.group()
             
 
 
@@ -88,9 +80,7 @@ while(True):
 
             result = re.search(time_pattern, content, flags=re.M)
             if result:
-                str_starttime = result.group()
-                starttime = datetime.strptime(str_starttime, alert_in_dt_format)
-                msg['card']['elements'][3]['text']['content'] = starttime.strftime(alert_out_dt_format)
+                msg['card']['elements'][3]['text']['content'] = result.group()
 
             result = re.search(cpcode_pattern, content, flags=re.M)
             if result:

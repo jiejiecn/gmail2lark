@@ -3,7 +3,7 @@ import requests, json, time, re
 from datetime import datetime
 import message, gmail, feishu
 import msg_cleared, msg_html
-import logger
+import logger, timeshift
 
 
 name_pattern = 'NAME\:.*'
@@ -61,11 +61,17 @@ while(True):
                 
                 result = re.search(time_pattern, content, flags=re.M)
                 if result:
-                    msg['card']['elements'][2]['text']['content'] = result.group()
+                    start_time = result.group()
+                    start_time = start_time.replace('START TIME:', '')
+                    cst_time = timeshift.toCST(start_time)
+                    msg['card']['elements'][2]['text']['content'] = cst_time
 
                 result = re.search(endtime_pattern, content, flags=re.M)            #Add stop time for alert cleared
                 if result:
-                    msg['card']['elements'][3]['text']['content'] = result.group()
+                    end_time = result.group()
+                    end_time = start_time.replace('STOP TIME:', '')
+                    cst_time = timeshift.toCST(start_time)
+                    msg['card']['elements'][3]['text']['content'] = cst_time
                 
                 logger.log(" ", msg)
 

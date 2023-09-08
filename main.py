@@ -71,7 +71,7 @@ while(True):
                 if result:
                     end_time = result.group()
                     end_time = end_time.replace('STOP TIME:', '')
-                    cst_endtime = timeshift.toCST(start_time)
+                    cst_endtime = timeshift.toCST(end_time)
                     end_time = "STOP TIME: " + cst_endtime.strftime("%Y-%m-%d %H:%M %Z%z")
                     msg['card']['elements'][3]['text']['content'] = end_time
                 

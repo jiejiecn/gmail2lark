@@ -2,13 +2,13 @@ msg_card = {
         "msg_type": "interactive",
         "card": {
             "elements": [
-                {
-                    "tag": "div",
-                    "text": {
-                        "content": "{{name}}",
-                        "tag": "lark_md"
-                        }
-                    },
+                # {
+                #     "tag": "div",
+                #     "text": {
+                #         "content": "{{name}}",
+                #         "tag": "lark_md"
+                #         }
+                #     },
                 {
                     "tag": "div",
                     "text": {

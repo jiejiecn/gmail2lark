@@ -130,6 +130,10 @@ while(True):
         msg['card']['header']['title']['content'] = mail['subject']
         msg['card']['header']['template'] = 'blue'
 
+        logger.log(msg)
+        
+        resp = requests.post(webhook, data=json.dumps(msg), headers=header)
+        logger.log("Response:", resp.text)
 
         time.sleep(5)
     

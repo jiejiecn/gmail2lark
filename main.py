@@ -64,14 +64,14 @@ while(True):
                     start_time = result.group()
                     start_time = start_time.replace('START TIME:', '')
                     cst_time = timeshift.toCST(start_time)
-                    msg['card']['elements'][2]['text']['content'] = cst_time
+                    msg['card']['elements'][2]['text']['content'] = cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
 
                 result = re.search(endtime_pattern, content, flags=re.M)            #Add stop time for alert cleared
                 if result:
                     end_time = result.group()
                     end_time = start_time.replace('STOP TIME:', '')
                     cst_time = timeshift.toCST(start_time)
-                    msg['card']['elements'][3]['text']['content'] = cst_time
+                    msg['card']['elements'][3]['text']['content'] = cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
                 
                 logger.log(" ", msg)
 

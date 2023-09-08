@@ -8,6 +8,7 @@ tz_cst = timezone('Asia/Shanghai')
 
 
 def toCST(str_time: str, format: str = akamai_format, tz: timezone = tz_utc):
+    str_time = str_time.strip()
     dt_time = datetime.strptime(str_time, format)
     dt_time = dt_time.replace(tzinfo=tz_utc)
     cst_time = dt_time.astimezone(tz_cst)

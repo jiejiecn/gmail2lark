@@ -26,7 +26,7 @@ while(True):
         logger.log(' Get mail: ', n)
         logger.log(' Subject: ', mail['subject'])
 
-        if (mail['content_text'].count() <= 0):
+        if (len(mail['content_text']) <= 0):
             msg = msg_html.msg_card
             msg['card']['header']['title']['content'] = mail['subject']
             msg['card']['header']['template'] = 'blue'

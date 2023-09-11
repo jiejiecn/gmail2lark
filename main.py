@@ -27,8 +27,8 @@ errors_pattern = "Errors\:.*"
 hits_keywords = ["Edge Errors", "HTTP Status", "Server Failure"]
 
 #############################################
-traffic_pattern = "Condition \(Mbits\/sec\)\:"
-traffic_threshold = "Threshold \(Mbits\/sec\)\:"
+traffic_pattern = "Condition \(Mbits\/sec\)\:.*"
+traffic_threshold = "Threshold \(Mbits\/sec\)\:.*"
 traffic_keywords = ["Low Traffic", "High Traffic"]
 
 

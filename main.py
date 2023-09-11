@@ -1,8 +1,10 @@
 import zmail
 import requests, json, time, re
 from datetime import datetime
+import datetime
 import message, gmail, feishu
 import msg_cleared, msg_html, msg_error, msg_hitserror, msg_traffic
+import traffic_data, uploadimg
 import logger, timeshift
 
 
@@ -193,7 +195,15 @@ while(True):
                             start_time = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
                             msg['card']['elements'][2]['text']['content'] = start_time
                         
-                        msg['card']['elements'][3]['img_key']= "img_v2_4c8ff95c-eae3-4677-a6e2-ecd57b8cb87g"
+                        if cpcode.find("multiple") < 0:
+                            end = cst_time + datetime.timedelta(hours=1)
+                            start = cst_time + datetime.timedelta(hours=-3)
+
+                            image = traffic_data.TrafficImage(cpcode, start, end)
+
+                            image_key = uploadimg.upload(image)
+
+                            msg['card']['elements'][3]['img_key']= image_key
 
                         # result = re.search(hits_pattern, content, flags=re.M)
                         # if result:

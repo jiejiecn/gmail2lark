@@ -1,13 +1,15 @@
-import requests, json
+import requests, json, random
 from datetime import datetime
 from urllib import parse as urltool
-
 from akamai.edgegrid import EdgeGridAuth
 from matplotlib import pyplot as plt
 #from matplotlib import ticker as ticker
 from matplotlib import dates as mdates
 
 import akamai_api, uploadimg
+
+seed = "abcdefghijklmnopqrstuvwxyz0123456789"
+
 
 session = requests.Session()
 session.auth = EdgeGridAuth(
@@ -82,21 +84,23 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
         plt.ylabel("Bandwidth MBit/s")
         plt.title("Traffic by Time of cpcode " + cpcode)
-        plt.savefig('akamai.png')
+        
         plt.legend()
 
-        uploadimg.upload('akamai.png')
-
+        image = cpcode + "_" + ''.join(random.sample(seed, 16)) + ".png"
+        plt.savefig(image)
         # edge_max = max(plt_edgebits)
         # max_idx = plt_edgebits.index(edge_max)
         # max_position=plt_datetime[max_idx]
         #plt.annotate("Peak: " + str(round(edge_max, 2)) + "Mbps", xy=(max_position, edge_max), xytext=(max_position, edge_max + 5))
         #plt.show()
 
+        return image
 
 
-if __name__ == '__main__':
-    start = datetime.strptime("2023-09-11T13:00:00Z", dateformat)
-    end = datetime.strptime("2023-09-11T20:00:00Z", dateformat)
 
-    TrafficImage("1417433", start, end)
+# if __name__ == '__main__':
+#     start = datetime.strptime("2023-09-11T13:00:00Z", dateformat)
+#     end = datetime.strptime("2023-09-11T20:00:00Z", dateformat)
+
+#     TrafficImage("1417433", start, end)

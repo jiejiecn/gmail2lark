@@ -32,13 +32,13 @@ msg_card = {
                         "tag": "lark_md"
                         }
                     },
-                {
-                    "tag": "div",
-                    "text": {
-                        "content": "{{duration}}",
-                        "tag": "lark_md"
-                        }
-                    },
+                # {
+                #     "tag": "div",
+                #     "text": {
+                #         "content": "{{duration}}",
+                #         "tag": "lark_md"
+                #         }
+                #     },
                 {
                     "tag": "div",
                     "text": {

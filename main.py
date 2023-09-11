@@ -67,7 +67,7 @@ while(True):
 
                     result = re.search(name_pattern, content, flags=re.M)
                     if result:
-                        name = result.group()
+                        name = result.group().strip()
                         msg['card']['header']['title']['content'] = name.replace('NAME:', 'Alert Cleared =>')
 
                     result = re.search(cpcode_pattern, content, flags=re.M)
@@ -119,7 +119,7 @@ while(True):
 
                         result = re.search(name_pattern, content, flags=re.M)
                         if result:
-                            name = result.group()
+                            name = result.group().strip()
                             msg['card']['header']['title']['content'] = name.replace('NAME:', 'New Alert =>')
 
                         result = re.search(cpcode_pattern, content, flags=re.M)
@@ -170,7 +170,7 @@ while(True):
 
                         result = re.search(name_pattern, content, flags=re.M)
                         if result:
-                            name = result.group()
+                            name = result.group().strip()
                             msg['card']['header']['title']['content'] = name.replace('NAME:', 'New Alert =>')
 
                         result = re.search(cpcode_pattern, content, flags=re.M)

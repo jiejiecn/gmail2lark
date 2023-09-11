@@ -214,12 +214,13 @@ while(True):
         
         time.sleep(30)
 
-    except:
+    except Exception as ex:
         msg = msg_error.msg_card
         msg['card']['header']['title']['content'] = mail['subject']
         msg['card']['header']['template'] = 'blue'
 
         logger.log(msg)
+        logger.log(ex)
 
         resp = requests.post(webhook, data=json.dumps(msg), headers=header)
         logger.log("Response:", resp.text)

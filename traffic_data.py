@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 #from matplotlib import ticker as ticker
 from matplotlib import dates as mdates
 
-import akamai_api, uploadimg
+import akamai_api, uploadimg, logger
 
 seed = "abcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -51,15 +51,13 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     body["objectIds"] = cpcodes
 
     response = session.post(url, headers=headers, data = json.dumps(body))
-    print(url)
-    print(response.text)
+    logger.log(url)
+    logger.log(body)
+    logger.log(response.text)
 
     if response.status_code == 200:
-
-    #with open("data.json") as input_data:
         raw_data = str(response.text)
         data = json.loads(raw_data.replace("N/A", "0.00"))
-        #data = json.load(input_data)
         pretty = json.dumps(data, indent=2)
         print(pretty)
 

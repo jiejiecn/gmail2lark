@@ -58,6 +58,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
     body["objectIds"].append(cpcode) 
 
+    logger.log(url, body)
+
     response = session.post(url, headers=headers, data = json.dumps(body))
 
     if response.status_code == 200:

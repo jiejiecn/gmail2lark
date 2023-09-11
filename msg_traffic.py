@@ -46,7 +46,6 @@ msg_card = {
                     },
                 {
                     "tag": "img",
-                    "img_key": "{{image}}",
                     "alt": {
                         "tag": "plain_text",
                         "content": "Traffic Image from Today's Traffic"

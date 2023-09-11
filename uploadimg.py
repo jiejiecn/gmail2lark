@@ -18,6 +18,7 @@ def upload(imageFile):
     headers['Content-Type'] = multi_form.content_type
 
     response = requests.request("POST", url, headers=headers, data=multi_form)
+    logger.log(response.text)
 
     image_key = "N/A"
 
@@ -45,6 +46,7 @@ def getToken():
     }
 
     response = requests.request("POST", url, headers=headers, data=json.dumps(body))
+    logger.log(response.text)
     
     tenant_token = "Token_Error"
 

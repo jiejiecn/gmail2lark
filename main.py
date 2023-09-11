@@ -98,8 +98,8 @@ while(True):
                         end_time = "STOP TIME:  " + cst_endtime.strftime("%Y-%m-%d %H:%M %Z%z")
                         msg['card']['elements'][3]['text']['content'] = end_time
                     
-                    duration = cst_endtime - cst_time                   
-                    msg['card']['elements'][4]['text']['content'] = duration
+                    # duration = cst_endtime - cst_time                   
+                    # msg['card']['elements'][4]['text']['content'] = duration
 
                     logger.log(msg)
 
@@ -162,7 +162,7 @@ while(True):
 
 
                     if any(e in content for e in traffic_keywords):                     #Low Traffice, High Traffic
-                        msg = msg_error.msg_card
+                        msg = message.msg_card
                         msg['card']['header']['title']['content'] = mail['subject']
                         msg['card']['header']['template'] = 'red'
 

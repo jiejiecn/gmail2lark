@@ -31,6 +31,20 @@ msg_card = {
                         }
                     },
                 {
+                    "tag": "div",
+                    "text": {
+                        "content": "{{traffic}}",
+                        "tag": "lark_md"
+                        }
+                    },
+                {
+                    "tag": "div",
+                    "text": {
+                        "content": "{{threshold}}",
+                        "tag": "lark_md"
+                        }
+                    },
+                {
                     "tag": "img",
                     "img_key": "{{image}}",
                     "alt": {

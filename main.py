@@ -27,7 +27,8 @@ errors_pattern = "Errors\:.*"
 hits_keywords = ["Edge Errors", "HTTP Status", "Server Failure"]
 
 #############################################
-traffic_pattern = ""
+traffic_pattern = "Condition \(Mbits\/sec\)\:"
+traffic_threshold = "Threshold \(Mbits\/sec\)\:"
 traffic_keywords = ["Low Traffic", "High Traffic"]
 
 
@@ -196,6 +197,19 @@ while(True):
                             str_start = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
                             msg['card']['elements'][2]['text']['content'] = str_start
                         
+                        result = re.search(traffic_pattern, content, flags=re.M)
+                        if result:
+                            traffic = result.group()
+                            traffic = ' '.join(desc.split())
+                            msg['card']['elements'][3]['text']['content'] = traffic
+                        
+                        result = re.search(traffic_threshold, content, flags=re.M)
+                        if result:
+                            threshold = result.group()
+                            threshold = ' '.join(desc.split())
+                            msg['card']['elements'][4]['text']['content'] = threshold
+
+
                         if cpcode.find("multiple") < 0:
                             dt_start = timeshift.toGMT(start_time)
 

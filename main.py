@@ -161,7 +161,7 @@ while(True):
                         logger.log("Response:", resp.text)
 
 
-                    if any(e in content for e in traffic_keywords):                     #Low Traffice, High Traffic
+                    if any(e in subject for e in traffic_keywords):                     #Low Traffice, High Traffic
                         msg = message.msg_card
                         msg['card']['header']['title']['content'] = mail['subject']
                         msg['card']['header']['template'] = 'red'

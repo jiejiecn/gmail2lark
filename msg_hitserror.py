@@ -1,4 +1,4 @@
-msg_pattern = ""
+
 
 msg_card = {
         "msg_type": "interactive",
@@ -29,6 +29,20 @@ msg_card = {
                     "tag": "div",
                     "text": {
                         "content": "{{time}}",
+                        "tag": "lark_md"
+                        }
+                    },
+                {
+                    "tag": "div",
+                    "text": {
+                        "content": "{{hits}}",
+                        "tag": "lark_md"
+                        }
+                    },
+                {
+                    "tag": "div",
+                    "text": {
+                        "content": "{{errors}}",
                         "tag": "lark_md"
                         }
                     },

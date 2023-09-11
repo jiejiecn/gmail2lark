@@ -35,6 +35,13 @@ msg_card = {
                 {
                     "tag": "div",
                     "text": {
+                        "content": "{{duration}}",
+                        "tag": "lark_md"
+                        }
+                    },
+                {
+                    "tag": "div",
+                    "text": {
                         "content": "*Login into <a href='https://control.akamai.com/apps/alerting'></a> for more alert information*",
                         "tag": "lark_md"
                         }

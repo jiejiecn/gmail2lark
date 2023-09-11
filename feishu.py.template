@@ -1,1 +1,2 @@
 webhook = 'https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxxxxxxxxxxxxx' 
+image_token = "t-xxxxxxxxxxxxxxxxxxxxxxx"

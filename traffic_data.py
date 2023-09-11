@@ -71,7 +71,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
 
         for item in data["data"]:
-            plt_datetime.append(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
+            plt_datetime.append(datetime.strptime(item["startdatetime"], "%Y-%m-%dT%H:%M:%SZ"))
             plt_edgebits.append(float(item["edgeBitsPerSecond"])/1000/1000)
             plt_midbits.append(float(item["midgressBitsPerSecond"])/1000/1000)
             plt_originbits.append(float(item["originBitsPerSecond"])/1000/1000)

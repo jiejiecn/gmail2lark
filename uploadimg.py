@@ -1,7 +1,7 @@
 import requests, json
 from requests_toolbelt import MultipartEncoder
 
-import feishu
+import feishu, logger
 
 def upload(imageFile):
     url = "https://open.feishu.cn/open-apis/im/v1/images"
@@ -46,9 +46,11 @@ def getToken():
     }
 
     response = requests.request("POST", url, headers=headers, data=json.dumps(body))
+    
+    tenant_token = "Token_Error"
 
     if response.status_code == 200:
         data = json.loads(response.text)
         tenant_token = data["tenant_access_token"]
 
-
+    return tenant_token

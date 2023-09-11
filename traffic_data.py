@@ -71,9 +71,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
 
         for item in data["data"]:
-            cst_time = timeshift.toCST(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
-            plt_datetime.append(cst_time)
-
+            plt_datetime.append(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
             plt_edgebits.append(float(item["edgeBitsPerSecond"])/1000/1000)
             plt_midbits.append(float(item["midgressBitsPerSecond"])/1000/1000)
             plt_originbits.append(float(item["originBitsPerSecond"])/1000/1000)
@@ -83,7 +81,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
         dateFormat = mdates.DateFormatter("%H:%M")
-        #plt.gca().xaxis_date('Asia/Shanghai')
+        plt.gca().xaxis_date('Asia/Shanghai')
         plt.gca().xaxis.set_major_formatter(dateFormat)
 
         plt.ylabel("Bandwidth MBit/s")

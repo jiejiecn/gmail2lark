@@ -1,0 +1,12 @@
+#####################################################################
+# Akamai API Credential
+
+client_token  = "akab-xxxxxxxxxxxxxxx"
+client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+access_token  = "akab-xxxxxxxxxxxxxxxxxx"
+host = "https://akab-xxxxxxxxxxxxxxxxxxxxxx.luna.akamaiapis.net"
+
+
+#####################################################################
+# For Wanshi Only
+accountSwitchKey = ""

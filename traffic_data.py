@@ -50,6 +50,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     body["objectIds"] = cpcodes
 
     response = session.post(url, headers=headers, data = json.dumps(body))
+    logger.log(cpcode)
     logger.log(url)
     logger.log(body)
     logger.log(response.text)

@@ -3,7 +3,6 @@ from datetime import datetime
 from urllib import parse as urltool
 from akamai.edgegrid import EdgeGridAuth
 from matplotlib import pyplot as plt
-#from matplotlib import ticker as ticker
 from matplotlib import dates as mdates
 
 import akamai_api, uploadimg, logger

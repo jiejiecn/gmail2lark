@@ -41,6 +41,16 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
         url = url + "&accountSwitchKey=" + urltool.quote(akamai_api.accountSwitchKey)
     
 
+    if start.minute < 30:
+        start.replace(minute=0)
+    else:
+        start.replace(minute=30)
+
+    if end.minute >= 30:
+        end.replace(minute=30)
+    else:
+        end.replace(minute=0)
+
     start_time = urltool.quote(start.strftime(dateformat))
     end_time = urltool.quote(end.strftime(dateformat))
     url = url.replace("{{start}}", start_time)

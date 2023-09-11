@@ -193,7 +193,7 @@ while(True):
                             start_time = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
                             msg['card']['elements'][2]['text']['content'] = start_time
                         
-                        msg['card']['elements'][3]['text']['content'] = "img_v2_4c8ff95c-eae3-4677-a6e2-ecd57b8cb87g"
+                        msg['card']['elements'][3]['img_key']= "img_v2_4c8ff95c-eae3-4677-a6e2-ecd57b8cb87g"
 
                         # result = re.search(hits_pattern, content, flags=re.M)
                         # if result:

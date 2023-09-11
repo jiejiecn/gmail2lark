@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, os
 from requests_toolbelt import MultipartEncoder
 
 import feishu, logger
@@ -28,6 +28,8 @@ def upload(imageFile):
         raw_data = str(response.text)
         data = json.loads(raw_data)
         image_key = data["data"]["image_key"]    
+    
+    os.remove(imageFile)
 
     return image_key
 

@@ -5,7 +5,7 @@ from akamai.edgegrid import EdgeGridAuth
 from matplotlib import pyplot as plt
 from matplotlib import dates as mdates
 
-import akamai_api, uploadimg, logger
+import akamai_api, logger, timeshift
 
 seed = "abcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -63,8 +63,6 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     if response.status_code == 200:
         raw_data = str(response.text)
         data = json.loads(raw_data.replace("N/A", "0.00"))
-        pretty = json.dumps(data, indent=2)
-        print(pretty)
 
         plt_datetime =[]
         plt_edgebits= []
@@ -73,7 +71,9 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
 
         for item in data["data"]:
-            plt_datetime.append(datetime.strptime(item["startdatetime"], "%Y-%m-%dT%H:%M:%SZ"))
+            cst_time = timeshift.toCST(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
+            plt_datetime.append(cst_time)
+
             plt_edgebits.append(float(item["edgeBitsPerSecond"])/1000/1000)
             plt_midbits.append(float(item["midgressBitsPerSecond"])/1000/1000)
             plt_originbits.append(float(item["originBitsPerSecond"])/1000/1000)

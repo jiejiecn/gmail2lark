@@ -46,9 +46,9 @@ while(True):
             logger.log('From:', mail['from'])
             logger.log('Subject:', mail['subject'])
 
-            mail_from = str(mail['from'])
-            if(mail_from.find('noreply@akamai.com') < 0):           #Not from Akamai, drop it
-               break
+            # mail_from = str(mail['from'])
+            # if(mail_from.find('noreply@akamai.com') < 0):           #Not from Akamai, drop it
+            #    break
 
             if (len(mail['content_text']) <= 0):                    #Html content, skip
                 msg = msg_html.msg_card

@@ -99,9 +99,7 @@ while(True):
                         msg['card']['elements'][3]['text']['content'] = end_time
                     
                     duration = cst_endtime - cst_time                   
-                    msg['card']['elements'][4]['text']['content'] = duration.days + " days, " + \
-                                                                    duration.hours + " hours, " + \
-                                                                    duration.minutes + " minutes"
+                    msg['card']['elements'][4]['text']['content'] = duration
 
                     logger.log(msg)
 

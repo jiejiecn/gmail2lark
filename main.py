@@ -200,13 +200,13 @@ while(True):
                         result = re.search(traffic_pattern, content, flags=re.M)
                         if result:
                             traffic = result.group()
-                            traffic = ' '.join(desc.split())
+                            traffic = ' '.join(traffic.split())
                             msg['card']['elements'][3]['text']['content'] = traffic
                         
                         result = re.search(traffic_threshold, content, flags=re.M)
                         if result:
                             threshold = result.group()
-                            threshold = ' '.join(desc.split())
+                            threshold = ' '.join(threshold.split())
                             msg['card']['elements'][4]['text']['content'] = threshold
 
 

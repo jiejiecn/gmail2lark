@@ -82,7 +82,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
         plt.plot(plt_datetime, plt_midbits, label="Midgress Traffic", color="purple")
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
-        dateFormat = mdates.DateFormatter("%m/%d %H:%M")
+        dateFormat = mdates.DateFormatter("%H:%M")
         plt.gca().xaxis.set_major_formatter(dateFormat)
 
         plt.ylabel("Bandwidth MBit/s")

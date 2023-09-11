@@ -209,18 +209,6 @@ while(True):
 
                             msg['card']['elements'][3]['img_key']= image_key
 
-                        # result = re.search(hits_pattern, content, flags=re.M)
-                        # if result:
-                        #     hits = result.group()
-                        #     msg['card']['elements'][3]['text']['content'] = hits
-
-                        # result = re.search(errors_pattern, content, flags=re.M)
-                        # if result:
-                        #     errors = result.group()
-                        #     msg['card']['elements'][4]['text']['content'] = errors
-
-
-
                         logger.log(msg)
 
 

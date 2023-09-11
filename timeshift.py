@@ -17,3 +17,11 @@ def toCST(str_time: str, format: str = akamai_format, tz: timezone = tz_utc):
     # print(dt_time)
     # print(dt_time.tzinfo)
     # print(cst_time.strftime("%Y-%m-%d %H:%M %Z%z"))
+
+
+def toGMT(str_time: str, format: str = akamai_format):
+    str_time = str_time.strip()
+    dt_time = datetime.strptime(str_time, format)
+    dt_time = dt_time.replace(tzinfo=tz_utc)
+
+    return dt_time

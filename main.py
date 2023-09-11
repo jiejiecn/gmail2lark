@@ -191,13 +191,16 @@ while(True):
                         if result:
                             start_time = result.group()
                             start_time = start_time.replace('START TIME:', '')
+
                             cst_time = timeshift.toCST(start_time)
-                            start_time = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
-                            msg['card']['elements'][2]['text']['content'] = start_time
+                            str_start = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
+                            msg['card']['elements'][2]['text']['content'] = str_start
                         
                         if cpcode.find("multiple") < 0:
-                            end = cst_time + datetime.timedelta(hours=1)
-                            start = cst_time + datetime.timedelta(hours=-3)
+                            dt_start = timeshift.toGMT(start_time)
+
+                            end = dt_start + datetime.timedelta(hours=1)
+                            start = dt_start + datetime.timedelta(hours=-3)
 
                             image = traffic_data.TrafficImage(cpcode, start, end)
 

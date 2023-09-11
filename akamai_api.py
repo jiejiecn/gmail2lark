@@ -8,4 +8,4 @@ host = "https://akab-bbf4tal34f2nyuye-35ltqwbrsgtf45ha.luna.akamaiapis.net"
 
 
 #####################################################################
-accountSwitchKey = "F-AC-3208390%3A1-5G3LB"
+accountSwitchKey = "F-AC-3208390:1-5G3LB"

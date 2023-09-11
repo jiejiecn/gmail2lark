@@ -2,7 +2,7 @@ import zmail
 import requests, json, time, re
 from datetime import datetime
 import message, gmail, feishu
-import msg_cleared, msg_html, msg_error, msg_hitserror
+import msg_cleared, msg_html, msg_error, msg_hitserror, msg_traffic
 import logger, timeshift
 
 
@@ -162,7 +162,7 @@ while(True):
 
 
                     if any(e in subject for e in traffic_keywords):                     #Low Traffice, High Traffic
-                        msg = message.msg_card
+                        msg = msg_traffic.msg_card
                         msg['card']['header']['title']['content'] = mail['subject']
                         msg['card']['header']['template'] = 'red'
 
@@ -193,6 +193,8 @@ while(True):
                             start_time = "START TIME: " + cst_time.strftime("%Y-%m-%d %H:%M %Z%z")
                             msg['card']['elements'][2]['text']['content'] = start_time
                         
+                        msg['card']['elements'][3]['text']['content'] = "img_v2_4c8ff95c-eae3-4677-a6e2-ecd57b8cb87g"
+
                         # result = re.search(hits_pattern, content, flags=re.M)
                         # if result:
                         #     hits = result.group()

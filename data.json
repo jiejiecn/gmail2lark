@@ -1,0 +1,802 @@
+{
+    "metadata": {
+      "name": "bytes-by-time",
+      "version": "1",
+      "outputType": "FLAT",
+      "groupBy": [
+        "startdatetime"
+      ],
+      "interval": "FIVE_MINUTES",
+      "start": "2023-09-10T15:00:00Z",
+      "end": "2023-09-11T00:00:00Z",
+      "availableDataEnds": "2023-09-10T19:00:00Z",
+      "suggestedRetryTime": "2023-09-11T17:20:32.554408858Z",
+      "rowCount": 108,
+      "filters": [],
+      "columns": [
+        {
+          "name": "groupBy",
+          "label": "startdatetime"
+        },
+        {
+          "name": "bytesOffload",
+          "label": "Offloaded Bytes"
+        },
+        {
+          "name": "edgeBitsPerSecond",
+          "label": "Edge Bits/Sec"
+        },
+        {
+          "name": "midgressBitsPerSecond",
+          "label": "Midgress Bits/Sec"
+        },
+        {
+          "name": "originBitsPerSecond",
+          "label": "Origin Bits/Sec"
+        }
+      ],
+      "objectType": "cpcode",
+      "objectIds": [
+        "1417433"
+      ]
+    },
+    "data": [
+      {
+        "startdatetime": "2023-09-10T15:00:00Z",
+        "bytesOffload": "99.40691061301721",
+        "edgeBitsPerSecond": "1246976765.333333",
+        "midgressBitsPerSecond": "40445351.68",
+        "originBitsPerSecond": "7395686.853333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:05:00Z",
+        "bytesOffload": "99.68012531027815",
+        "edgeBitsPerSecond": "1266546922.96",
+        "midgressBitsPerSecond": "45315638.24",
+        "originBitsPerSecond": "4051363.04"
+      },
+      {
+        "startdatetime": "2023-09-10T15:10:00Z",
+        "bytesOffload": "99.55086546812508",
+        "edgeBitsPerSecond": "1267406046.373333",
+        "midgressBitsPerSecond": "41084171.54666667",
+        "originBitsPerSecond": "5692358.213333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:15:00Z",
+        "bytesOffload": "99.51954792225950",
+        "edgeBitsPerSecond": "1281491782.133333",
+        "midgressBitsPerSecond": "35805364.98666667",
+        "originBitsPerSecond": "6156953.893333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:20:00Z",
+        "bytesOffload": "99.52775098836710",
+        "edgeBitsPerSecond": "1286066253.973333",
+        "midgressBitsPerSecond": "38866162.82666667",
+        "originBitsPerSecond": "6073435.173333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:25:00Z",
+        "bytesOffload": "99.42873252917213",
+        "edgeBitsPerSecond": "1313203178.853333",
+        "midgressBitsPerSecond": "61098488.18666667",
+        "originBitsPerSecond": "7501902.586666667"
+      },
+      {
+        "startdatetime": "2023-09-10T15:30:00Z",
+        "bytesOffload": "99.55112002865997",
+        "edgeBitsPerSecond": "1289905333.946667",
+        "midgressBitsPerSecond": "75097485.28",
+        "originBitsPerSecond": "5790126.693333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:35:00Z",
+        "bytesOffload": "99.57338957605010",
+        "edgeBitsPerSecond": "1313855115.893333",
+        "midgressBitsPerSecond": "75556588.18666667",
+        "originBitsPerSecond": "5605042.88"
+      },
+      {
+        "startdatetime": "2023-09-10T15:40:00Z",
+        "bytesOffload": "99.59772878845079",
+        "edgeBitsPerSecond": "1301457188.506667",
+        "midgressBitsPerSecond": "69175246.93333333",
+        "originBitsPerSecond": "5235387.6"
+      },
+      {
+        "startdatetime": "2023-09-10T15:45:00Z",
+        "bytesOffload": "99.63952964711386",
+        "edgeBitsPerSecond": "1310778968.506667",
+        "midgressBitsPerSecond": "61358671.65333333",
+        "originBitsPerSecond": "4724969.573333333"
+      },
+      {
+        "startdatetime": "2023-09-10T15:50:00Z",
+        "bytesOffload": "99.24937697235138",
+        "edgeBitsPerSecond": "1343600381.973333",
+        "midgressBitsPerSecond": "67466067.38666667",
+        "originBitsPerSecond": "10085373.86666667"
+      },
+      {
+        "startdatetime": "2023-09-10T15:55:00Z",
+        "bytesOffload": "99.37746530774664",
+        "edgeBitsPerSecond": "1318121427.68",
+        "midgressBitsPerSecond": "65916006.32",
+        "originBitsPerSecond": "8205763.173333333"
+      },
+      {
+        "startdatetime": "2023-09-10T16:00:00Z",
+        "bytesOffload": "99.34067213620084",
+        "edgeBitsPerSecond": "1433255642.933333",
+        "midgressBitsPerSecond": "60426480.48",
+        "originBitsPerSecond": "9449853.813333333"
+      },
+      {
+        "startdatetime": "2023-09-10T16:05:00Z",
+        "bytesOffload": "99.50053473139344",
+        "edgeBitsPerSecond": "1304406203.226667",
+        "midgressBitsPerSecond": "44281729.12",
+        "originBitsPerSecond": "6515055.946666667"
+      },
+      {
+        "startdatetime": "2023-09-10T16:10:00Z",
+        "bytesOffload": "99.45162202538607",
+        "edgeBitsPerSecond": "1408365701.066667",
+        "midgressBitsPerSecond": "36442688.18666667",
+        "originBitsPerSecond": "7723167.306666667"
+      },
+      {
+        "startdatetime": "2023-09-10T16:15:00Z",
+        "bytesOffload": "99.64508143655466",
+        "edgeBitsPerSecond": "1347900463.013333",
+        "midgressBitsPerSecond": "29391822.85333333",
+        "originBitsPerSecond": "4783948.96"
+      },
+      {
+        "startdatetime": "2023-09-10T16:20:00Z",
+        "bytesOffload": "99.64994805740845",
+        "edgeBitsPerSecond": "1368031061.68",
+        "midgressBitsPerSecond": "30452318.74666667",
+        "originBitsPerSecond": "4788819.306666667"
+      },
+      {
+        "startdatetime": "2023-09-10T16:25:00Z",
+        "bytesOffload": "99.61418536711843",
+        "edgeBitsPerSecond": "1429155381.04",
+        "midgressBitsPerSecond": "28607255.01333333",
+        "originBitsPerSecond": "5513890.586666667"
+      },
+      {
+        "startdatetime": "2023-09-10T16:30:00Z",
+        "bytesOffload": "99.71131286193013",
+        "edgeBitsPerSecond": "1410075040.826667",
+        "midgressBitsPerSecond": "30047586.85333333",
+        "originBitsPerSecond": "4070705.28"
+      },
+      {
+        "startdatetime": "2023-09-10T16:35:00Z",
+        "bytesOffload": "99.49978233179411",
+        "edgeBitsPerSecond": "1464412002.8",
+        "midgressBitsPerSecond": "28857862.16",
+        "originBitsPerSecond": "7325247.573333333"
+      },
+      {
+        "startdatetime": "2023-09-10T16:40:00Z",
+        "bytesOffload": "99.40487618696048",
+        "edgeBitsPerSecond": "1456003818.053333",
+        "midgressBitsPerSecond": "36598411.09333333",
+        "originBitsPerSecond": "8665025.44"
+      },
+      {
+        "startdatetime": "2023-09-10T16:45:00Z",
+        "bytesOffload": "99.43215600431793",
+        "edgeBitsPerSecond": "1434921334.373333",
+        "midgressBitsPerSecond": "30583877.65333333",
+        "originBitsPerSecond": "8148114.64"
+      },
+      {
+        "startdatetime": "2023-09-10T16:50:00Z",
+        "bytesOffload": "99.50521002547142",
+        "edgeBitsPerSecond": "1470739985.573333",
+        "midgressBitsPerSecond": "29164074.32",
+        "originBitsPerSecond": "7277074"
+      },
+      {
+        "startdatetime": "2023-09-10T16:55:00Z",
+        "bytesOffload": "99.43134703749900",
+        "edgeBitsPerSecond": "1454727807.44",
+        "midgressBitsPerSecond": "27352762.13333333",
+        "originBitsPerSecond": "8272352.773333333"
+      },
+      {
+        "startdatetime": "2023-09-10T17:00:00Z",
+        "bytesOffload": "99.35493076430432",
+        "edgeBitsPerSecond": "1445602419.706667",
+        "midgressBitsPerSecond": "31167357.30666667",
+        "originBitsPerSecond": "9325136.48"
+      },
+      {
+        "startdatetime": "2023-09-10T17:05:00Z",
+        "bytesOffload": "99.38352449275269",
+        "edgeBitsPerSecond": "1428601902.773333",
+        "midgressBitsPerSecond": "30834418.56",
+        "originBitsPerSecond": "8806980.826666667"
+      },
+      {
+        "startdatetime": "2023-09-10T17:10:00Z",
+        "bytesOffload": "99.54501165084044",
+        "edgeBitsPerSecond": "1401045411.04",
+        "midgressBitsPerSecond": "29270206.37333333",
+        "originBitsPerSecond": "6374593.386666667"
+      },
+      {
+        "startdatetime": "2023-09-10T17:15:00Z",
+        "bytesOffload": "99.54907174747513",
+        "edgeBitsPerSecond": "1352620290.666667",
+        "midgressBitsPerSecond": "26141948.05333333",
+        "originBitsPerSecond": "6099347.04"
+      },
+      {
+        "startdatetime": "2023-09-10T17:20:00Z",
+        "bytesOffload": "99.48030186699783",
+        "edgeBitsPerSecond": "1275760360.16",
+        "midgressBitsPerSecond": "23493973.06666667",
+        "originBitsPerSecond": "6630102.773333333"
+      },
+      {
+        "startdatetime": "2023-09-10T17:25:00Z",
+        "bytesOffload": "99.52982658177967",
+        "edgeBitsPerSecond": "1204637374.32",
+        "midgressBitsPerSecond": "29298834.29333333",
+        "originBitsPerSecond": "5663884.72"
+      },
+      {
+        "startdatetime": "2023-09-10T17:30:00Z",
+        "bytesOffload": "99.52020173304968",
+        "edgeBitsPerSecond": "1264833841.92",
+        "midgressBitsPerSecond": "35794550.74666667",
+        "originBitsPerSecond": "6068650.853333333"
+      },
+      {
+        "startdatetime": "2023-09-10T17:35:00Z",
+        "bytesOffload": "99.58733030096138",
+        "edgeBitsPerSecond": "1212137393.413333",
+        "midgressBitsPerSecond": "29267531.89333333",
+        "originBitsPerSecond": "5002123.733333333"
+      },
+      {
+        "startdatetime": "2023-09-10T17:40:00Z",
+        "bytesOffload": "99.66064982439905",
+        "edgeBitsPerSecond": "1193127672.96",
+        "midgressBitsPerSecond": "24487095.76",
+        "originBitsPerSecond": "4048880.853333333"
+      },
+      {
+        "startdatetime": "2023-09-10T17:45:00Z",
+        "bytesOffload": "99.67524107360524",
+        "edgeBitsPerSecond": "1125677359.28",
+        "midgressBitsPerSecond": "21723218.24",
+        "originBitsPerSecond": "3655737.706666667"
+      },
+      {
+        "startdatetime": "2023-09-10T17:50:00Z",
+        "bytesOffload": "99.43461101173714",
+        "edgeBitsPerSecond": "1108044077.626667",
+        "midgressBitsPerSecond": "29224937.97333333",
+        "originBitsPerSecond": "6264759.2"
+      },
+      {
+        "startdatetime": "2023-09-10T17:55:00Z",
+        "bytesOffload": "99.58819319114739",
+        "edgeBitsPerSecond": "1112218191.04",
+        "midgressBitsPerSecond": "25199849.78666667",
+        "originBitsPerSecond": "4580190.24"
+      },
+      {
+        "startdatetime": "2023-09-10T18:00:00Z",
+        "bytesOffload": "99.69385541651182",
+        "edgeBitsPerSecond": "1102157606.346667",
+        "midgressBitsPerSecond": "23160141.68",
+        "originBitsPerSecond": "3374195.813333333"
+      },
+      {
+        "startdatetime": "2023-09-10T18:05:00Z",
+        "bytesOffload": "99.58601557319446",
+        "edgeBitsPerSecond": "1135294911.84",
+        "midgressBitsPerSecond": "26263370.88",
+        "originBitsPerSecond": "4699944.133333333"
+      },
+      {
+        "startdatetime": "2023-09-10T18:10:00Z",
+        "bytesOffload": "99.60765380585744",
+        "edgeBitsPerSecond": "1081067060.16",
+        "midgressBitsPerSecond": "25504262.32",
+        "originBitsPerSecond": "4241525.466666667"
+      },
+      {
+        "startdatetime": "2023-09-10T18:15:00Z",
+        "bytesOffload": "99.59744518437556",
+        "edgeBitsPerSecond": "1063288256.373333",
+        "midgressBitsPerSecond": "21435395.09333333",
+        "originBitsPerSecond": "4280318.08"
+      },
+      {
+        "startdatetime": "2023-09-10T18:20:00Z",
+        "bytesOffload": "99.59786059218464",
+        "edgeBitsPerSecond": "1069516808.453333",
+        "midgressBitsPerSecond": "22903030.21333333",
+        "originBitsPerSecond": "4300948.56"
+      },
+      {
+        "startdatetime": "2023-09-10T18:25:00Z",
+        "bytesOffload": "99.47360300370809",
+        "edgeBitsPerSecond": "1008119480.933333",
+        "midgressBitsPerSecond": "21910645.52",
+        "originBitsPerSecond": "5306710.666666667"
+      },
+      {
+        "startdatetime": "2023-09-10T18:30:00Z",
+        "bytesOffload": "99.58742464701237",
+        "edgeBitsPerSecond": "1094587654.666667",
+        "midgressBitsPerSecond": "28156887.57333333",
+        "originBitsPerSecond": "4515998.88"
+      },
+      {
+        "startdatetime": "2023-09-10T18:35:00Z",
+        "bytesOffload": "99.60935249271544",
+        "edgeBitsPerSecond": "1247725205.573333",
+        "midgressBitsPerSecond": "27655181.86666667",
+        "originBitsPerSecond": "4874207.413333333"
+      },
+      {
+        "startdatetime": "2023-09-10T18:40:00Z",
+        "bytesOffload": "99.63903120490314",
+        "edgeBitsPerSecond": "1227044607.04",
+        "midgressBitsPerSecond": "24634004.26666667",
+        "originBitsPerSecond": "4429248.133333333"
+      },
+      {
+        "startdatetime": "2023-09-10T18:45:00Z",
+        "bytesOffload": "99.69358828227097",
+        "edgeBitsPerSecond": "1224566336.586667",
+        "midgressBitsPerSecond": "21177209.46666667",
+        "originBitsPerSecond": "3752214.746666667"
+      },
+      {
+        "startdatetime": "2023-09-10T18:50:00Z",
+        "bytesOffload": "99.53226435662499",
+        "edgeBitsPerSecond": "1231897969.493333",
+        "midgressBitsPerSecond": "23743389.17333333",
+        "originBitsPerSecond": "5762025.893333333"
+      },
+      {
+        "startdatetime": "2023-09-10T18:55:00Z",
+        "bytesOffload": "99.62574467011918",
+        "edgeBitsPerSecond": "1178798634.986667",
+        "midgressBitsPerSecond": "22341849.97333333",
+        "originBitsPerSecond": "4411716.72"
+      },
+      {
+        "startdatetime": "2023-09-10T19:00:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:05:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:10:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:15:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:20:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:25:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:30:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:35:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:40:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:45:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:50:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T19:55:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:00:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:05:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:10:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:15:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:20:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:25:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:30:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:35:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:40:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:45:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:50:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T20:55:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:00:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:05:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:10:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:15:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:20:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:25:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:30:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:35:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:40:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:45:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:50:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T21:55:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:00:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:05:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:10:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:15:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:20:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:25:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:30:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:35:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:40:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:45:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:50:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T22:55:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:00:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:05:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:10:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:15:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:20:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:25:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:30:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:35:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:40:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:45:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:50:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      },
+      {
+        "startdatetime": "2023-09-10T23:55:00Z",
+        "bytesOffload": "0.00",
+        "edgeBitsPerSecond": "0.00",
+        "midgressBitsPerSecond": "0.00",
+        "originBitsPerSecond": "0.00"
+      }
+    ],
+    "summaryStatistics": {}
+  }

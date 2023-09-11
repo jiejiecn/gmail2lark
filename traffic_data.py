@@ -1,5 +1,7 @@
 import requests, json
 from datetime import datetime
+from urllib import parse as urltool
+
 from akamai.edgegrid import EdgeGridAuth
 from matplotlib import pyplot as plt
 #from matplotlib import ticker as ticker
@@ -30,15 +32,16 @@ body = {
 }
 
 
+
 def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
-    url = akamai_api.host + "/reporting-api/v1/reports/todaytraffic-by-time/versions/1/report-data?start={{start}}&end={{}}&interval=FIVE_MINUTES"
+    url = akamai_api.host + "/reporting-api/v1/reports/todaytraffic-by-time/versions/1/report-data?start={{start}}&end={{end}}&interval=FIVE_MINUTES"
     if akamai_api.accountSwitchKey != "":
-        url = url + "&accountSwitchKey=" + akamai_api.accountSwitchKey
+        url = url + "&accountSwitchKey=" + urltool.quote(akamai_api.accountSwitchKey)
     
 
-    start_time = start.strftime(dateformat)
-    end_time = end.strftime(datetime)
+    start_time = urltool.quote(start.strftime(dateformat))
+    end_time = urltool.quote(end.strftime(dateformat))
     url = url.replace("{{start}}", start_time)
     url = url.replace("{{end}}", end_time)
 
@@ -46,6 +49,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     body["objectIds"] = cpcodes
 
     response = session.post(url, headers=headers, data = json.dumps(body))
+    print(url)
+    print(response.text)
 
     if response.status_code == 200:
 
@@ -53,8 +58,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
         raw_data = str(response.text)
         data = json.loads(raw_data.replace("N/A", "0.00"))
         #data = json.load(input_data)
-        #pretty = json.dumps(data, indent=2)
-        #print(pretty)
+        pretty = json.dumps(data, indent=2)
+        print(pretty)
 
         plt_datetime =[]
         plt_edgebits= []
@@ -90,3 +95,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
 
 
+if __name__ == '__main__':
+    start = datetime.strptime("2023-09-11T13:00:00Z", dateformat)
+    end = datetime.strptime("2023-09-11T20:00:00Z", dateformat)
+
+    TrafficImage("1417433", start, end)

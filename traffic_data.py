@@ -27,8 +27,8 @@ body = {
         "metrics": [
             "edgeBitsPerSecond",
             "midgressBitsPerSecond",
-            "originBitsPerSecond",
-            "bytesOffload"
+            "originBitsPerSecond"
+            #"bytesOffload"
         ]
 }
 

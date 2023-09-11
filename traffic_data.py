@@ -71,7 +71,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
 
         for item in data["data"]:
-            cst_time = timeshift.toCST(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
+            cst_time = timeshift.toGMT(item["startdatetime"], format="%Y-%m-%dT%H:%M:%SZ")
             plt_datetime.append(cst_time)
 
             plt_edgebits.append(float(item["edgeBitsPerSecond"])/1000/1000)

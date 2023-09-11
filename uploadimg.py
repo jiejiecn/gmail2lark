@@ -10,7 +10,7 @@ def upload(imageFile):
             'image': (open(imageFile, 'rb'))}  
     
     headers = {
-        'Authorization': 'Bearer ' + feishu.image_token
+        'Authorization': 'Bearer ' + getToken()
     }
     
     multi_form = MultipartEncoder(form)
@@ -22,7 +22,7 @@ def upload(imageFile):
     #print(response.headers['X-Tt-Logid'])  # for debug or oncall
     print(response.content)  # Print Response
 
-    image_key = ""
+    image_key = "N/A"
 
     if response.status_code == 200:
         raw_data = str(response.text)
@@ -30,4 +30,25 @@ def upload(imageFile):
         image_key = data["data"]["image_key"]    
 
     return image_key
+
+
+
+def getToken():
+    url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
+
+    headers = {
+        'Content-Type': 'application/json; charset=utf-8'
+    }
+
+    body = {
+        'app_id': feishu.app_id,
+        'app_secret': feishu.app_secret
+    }
+
+    response = requests.request("POST", url, headers=headers, data=json.dumps(body))
+
+    if response.status_code == 200:
+        data = json.loads(response.text)
+        tenant_token = data["tenant_access_token"]
+
 

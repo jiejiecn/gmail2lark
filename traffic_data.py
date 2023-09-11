@@ -39,10 +39,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     url = akamai_api.host + "/reporting-api/v1/reports/todaytraffic-by-time/versions/1/report-data?start={{start}}&end={{end}}&interval=FIVE_MINUTES"
     if akamai_api.accountSwitchKey != "":
         url = url + "&accountSwitchKey=" + urltool.quote(akamai_api.accountSwitchKey)
-    
 
-    logger.log(start, end)
-    
     if start.minute < 30:
         start = start.replace(minute=0)
     else:
@@ -53,8 +50,6 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     else:
         end = end.replace(minute=0)
 
-    logger.log(start, end)
-
 
     start_time = urltool.quote(start.strftime(dateformat))
     end_time = urltool.quote(end.strftime(dateformat))
@@ -64,10 +59,6 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     body["objectIds"].append(cpcode) 
 
     response = session.post(url, headers=headers, data = json.dumps(body))
-    logger.log(cpcode)
-    logger.log(url)
-    logger.log(body)
-    logger.log(response.text)
 
     if response.status_code == 200:
         raw_data = str(response.text)

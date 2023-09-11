@@ -221,7 +221,7 @@ while(True):
 
                             image_key = uploadimg.upload(image)
 
-                            msg['card']['elements'][3]['img_key']= image_key
+                            msg['card']['elements'][5]['img_key']= image_key
 
                         logger.log(msg)
 

@@ -10,13 +10,7 @@ import sentry_sdk
 
 sentry_sdk.init(
     dsn="https://2b043d661ceef3bf48111f106589dfbd@o1017856.ingest.sentry.io/4505867134435328",
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
-    # We recommend adjusting this value in production.
     traces_sample_rate=1.0,
-    # Set profiles_sample_rate to 1.0 to profile 100%
-    # of sampled transactions.
-    # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
 )
 
@@ -59,9 +53,9 @@ while(True):
             logger.log('From:', mail['from'])
             logger.log('Subject:', mail['subject'])
 
-            mail_from = str(mail['from'])
-            if(akamai_only and mail_from.find('noreply@akamai.com') < 0):           #Not from Akamai, drop it
-               break
+            # mail_from = str(mail['from'])
+            # if(akamai_only and mail_from.find('noreply@akamai.com') < 0):           #Not from Akamai, drop it
+            #    break
 
             if (len(mail['content_text']) <= 0):                    #Html content, skip
                 msg = msg_html.msg_card

@@ -45,6 +45,8 @@ def getToken():
         'app_secret': feishu.app_secret
     }
 
+    logger.log("Get tenant access token")
+
     response = requests.request("POST", url, headers=headers, data=json.dumps(body))
     logger.log(response.text)
     

@@ -2,7 +2,7 @@ import zmail
 import requests, json, time, re
 from datetime import datetime
 import datetime
-import message, gmail, feishu
+import gmail, feishu
 import msg_cleared, msg_html, msg_error, msg_hitserror, msg_traffic
 import traffic_data, uploadimg
 import logger, timeshift
@@ -13,12 +13,6 @@ time_pattern = 'START TIME\:.*'
 endtime_pattern = 'STOP TIME\:.*'
 cpcode_pattern = 'CP Code\:.*'
 cpdesc_pattern = 'CP Code Description\:.*'
-
-#############################################
-
-
-#############################################
-condition_pattern = ""
 
 
 #############################################
@@ -213,8 +207,8 @@ while(True):
                         if cpcode.find("multiple") < 0:
                             dt_start = timeshift.toGMT(start_time)
 
-                            end = dt_start + datetime.timedelta(hours=1)
-                            start = dt_start + datetime.timedelta(hours=-3)
+                            end = dt_start + datetime.timedelta(minutes=30)
+                            start = dt_start + datetime.timedelta(minutes=-150)
 
                             code = cpcode.replace("CP Code:", "").strip()
                             image = traffic_data.TrafficImage(code, start, end)

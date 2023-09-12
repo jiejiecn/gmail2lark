@@ -1,4 +1,4 @@
-import requests, json, random
+import requests, json, random, pytz
 from datetime import datetime
 from urllib import parse as urltool
 from akamai.edgegrid import EdgeGridAuth
@@ -63,6 +63,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
     response = session.post(url, headers=headers, data = json.dumps(body))
 
     if response.status_code == 200:
+        logger.log("Traffic Data OK")
         raw_data = str(response.text)
         data = json.loads(raw_data.replace("N/A", "0.00"))
 
@@ -84,7 +85,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
 
         dateFormat = mdates.DateFormatter("%H:%M")
         plt.gca().xaxis_date('Asia/Shanghai')
-        plt.gca().xaxis.set_major_formatter(dateFormat)
+        plt.gca().xaxis.set_major_formatter(dateFormat, tz=pytz.UTC)
 
         plt.ylabel("Bandwidth MBit/s")
         plt.title("Traffic by Time of cpcode " + cpcode)

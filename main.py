@@ -224,7 +224,7 @@ while(True):
                         logger.log("Response:", resp.text)
 
         
-        time.sleep(30)
+        time.sleep(10)
 
     except Exception as ex:
         msg = msg_error.msg_card

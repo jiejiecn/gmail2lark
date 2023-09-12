@@ -83,9 +83,9 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime):
         plt.plot(plt_datetime, plt_midbits, label="Midgress Traffic", color="purple")
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
-        dateFormat = mdates.DateFormatter("%H:%M")
+        dateFormat = mdates.DateFormatter("%H:%M", tz=pytz.UTC)
         plt.gca().xaxis_date('Asia/Shanghai')
-        plt.gca().xaxis.set_major_formatter(dateFormat, tz=pytz.UTC)
+        plt.gca().xaxis.set_major_formatter(dateFormat)
 
         plt.ylabel("Bandwidth MBit/s")
         plt.title("Traffic by Time of cpcode " + cpcode)

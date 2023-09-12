@@ -34,7 +34,7 @@ body = {
 
 
 
-def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime, threshold: float = 500.0):
+def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime, threshold: float = 0.0):
 
     url = akamai_api.host + "/reporting-api/v1/reports/todaytraffic-by-time/versions/1/report-data?start={{start}}&end={{end}}&interval=FIVE_MINUTES"
     if akamai_api.accountSwitchKey != "":
@@ -84,8 +84,9 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime,
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
         plt.axhline(threshold, color='red', ls="--", lw=1)
-        plt.text(min(plt_datetime), threshold * 1.02, "Threshold: " + str(threshold), color='red')
         plt.axvspan(trigger, max(plt_datetime), facecolor='red', alpha=0.3 )
+        if threshold > 0:
+            plt.text(min(plt_datetime), threshold * 1.02, "Threshold: " + str(threshold), color='red')
 
         dateFormat = mdates.DateFormatter("%H:%M", tz=pytz.timezone("Asia/Shanghai"))
         plt.gca().xaxis.set_major_formatter(dateFormat)

@@ -211,7 +211,9 @@ while(True):
                             start = dt_start + datetime.timedelta(minutes=-150)
 
                             code = cpcode.replace("CP Code:", "").strip()
-                            image = traffic_data.TrafficImage(code, start, end, dt_start)
+                            threhold_line = float(threshold.replace("Threshold (Mbits/sec):", "").strip())
+
+                            image = traffic_data.TrafficImage(code, start, end, dt_start, threhold_line)
 
                             image_key = uploadimg.upload(image)
 

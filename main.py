@@ -6,6 +6,19 @@ import gmail, feishu
 import msg_cleared, msg_html, msg_error, msg_hitserror, msg_traffic
 import traffic_data, uploadimg
 import logger, timeshift
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://2b043d661ceef3bf48111f106589dfbd@o1017856.ingest.sentry.io/4505867134435328",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
 
 ############################################
 name_pattern = 'NAME\:.*'

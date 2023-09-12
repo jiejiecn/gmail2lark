@@ -64,6 +64,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime,
 
         response = session.post(url, headers=headers, data=json.dumps(body), timeout=10)
 
+        plt.clf()
+
         if response.status_code == 200:
             logger.log("Traffic Data OK")
             raw_data = str(response.text)

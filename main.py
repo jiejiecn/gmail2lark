@@ -211,7 +211,7 @@ while(True):
                             start = dt_start + datetime.timedelta(minutes=-150)
 
                             code = cpcode.replace("CP Code:", "").strip()
-                            image = traffic_data.TrafficImage(code, start, end)
+                            image = traffic_data.TrafficImage(code, start, end, dt_start)
 
                             image_key = uploadimg.upload(image)
 

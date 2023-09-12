@@ -55,6 +55,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime,
     url = url.replace("{{start}}", start_time)
     url = url.replace("{{end}}", end_time)
 
+    body["objectIds"].clear()
     body["objectIds"].append(cpcode) 
 
     image = "None"

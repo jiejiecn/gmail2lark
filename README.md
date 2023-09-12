@@ -8,3 +8,25 @@
 #### 运行
 
 *python3 main.py*
+
+</br>
+
+#### 维护
+
+1. 程序目录下可能因为运行异常产生png图片文件，需手工清理
+2. 日志可以重定向到指定文件夹做DEBUG
+3. …… 
+
+</br>
+
+#### Dockerfile
+
+没空写…… U can U up
+
+</br>
+
+#### About Akamai CDN
+
+Once it was the inventor of CDN, once ...
+
+</br>

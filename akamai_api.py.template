@@ -8,5 +8,5 @@ host = "https://akab-xxxxxxxxxxxxxxxxxxxxxx.luna.akamaiapis.net"
 
 
 #####################################################################
-# For Wanshi Only
+# For Partner Only
 accountSwitchKey = ""

@@ -7,7 +7,7 @@ import msg_cleared, msg_html, msg_error, msg_hitserror, msg_traffic
 import traffic_data, uploadimg
 import logger, timeshift
 
-
+############################################
 name_pattern = 'NAME\:.*'
 time_pattern = 'START TIME\:.*'
 endtime_pattern = 'STOP TIME\:.*'
@@ -29,6 +29,8 @@ traffic_keywords = ["Low Traffic", "High Traffic"]
 
 webhook = feishu.webhook
 header = {'Content-Type': 'application/json'}
+
+gmail_inverval = int(gmail.interval)
 
 
 while(True):
@@ -226,7 +228,7 @@ while(True):
                         logger.log("Response:", resp.text)
 
         
-        time.sleep(10)
+        time.sleep(gmail_inverval)
 
     except Exception as ex:
         msg = msg_error.msg_card

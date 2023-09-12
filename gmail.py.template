@@ -1,3 +1,4 @@
 username = 'xxxx@xxxx.com'
 password = '1234567890'
 popserver= 'pop.gmail.com'
+interval = '10'

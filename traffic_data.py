@@ -83,7 +83,8 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime,
         plt.plot(plt_datetime, plt_midbits, label="Midgress Traffic", color="purple")
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
-        plt.axhline(threshold, facecolor='red', ls="--", lw=1)
+        plt.axhline(threshold, color='red', ls="--", lw=1)
+        plt.text(10, threshold * 1.02, "Threshold: " + threshold, color='red')
         plt.axvspan(trigger, max(plt_datetime), facecolor='red', alpha=0.8 )
 
         dateFormat = mdates.DateFormatter("%H:%M", tz=pytz.timezone("Asia/Shanghai"))

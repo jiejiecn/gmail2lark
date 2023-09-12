@@ -86,7 +86,7 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime)
         dateFormat = mdates.DateFormatter("%H:%M", tz=pytz.timezone("Asia/Shanghai"))
         plt.gca().xaxis.set_major_formatter(dateFormat)
 
-        plt.axvspan(trigger)
+        plt.axvspan(trigger, max(plt_datetime))
 
         plt.ylabel("Bandwidth MBit/s")
         plt.title("Traffic by Time of cpcode " + cpcode)

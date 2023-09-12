@@ -34,7 +34,7 @@ body = {
 
 
 
-def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime):
+def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime, threshold: float = 500.0):
 
     url = akamai_api.host + "/reporting-api/v1/reports/todaytraffic-by-time/versions/1/report-data?start={{start}}&end={{end}}&interval=FIVE_MINUTES"
     if akamai_api.accountSwitchKey != "":
@@ -83,10 +83,11 @@ def TrafficImage(cpcode: str, start: datetime, end: datetime, trigger: datetime)
         plt.plot(plt_datetime, plt_midbits, label="Midgress Traffic", color="purple")
         plt.plot(plt_datetime, plt_originbits, label="Origin Traffic", color="orange")
 
+        plt.axhline(threshold, facecolor='red', ls="--", lw=1)
+        plt.axvspan(trigger, max(plt_datetime), facecolor='red', alpha=0.8 )
+
         dateFormat = mdates.DateFormatter("%H:%M", tz=pytz.timezone("Asia/Shanghai"))
         plt.gca().xaxis.set_major_formatter(dateFormat)
-
-        plt.axvspan(trigger, max(plt_datetime), facecolor='red', alpha=0.6 )
 
         plt.ylabel("Bandwidth MBit/s")
         plt.title("Traffic by Time of cpcode " + cpcode)
